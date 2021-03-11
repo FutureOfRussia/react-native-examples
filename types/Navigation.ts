@@ -1,17 +1,15 @@
-export type RootStackParamList = {
-  Root: undefined
-  NotFound: undefined
+import { StackNavigationProp } from '@react-navigation/stack'
+import { RouteProp } from '@react-navigation/native'
+
+export type MainStackParamList = {
+  Main: undefined
+  Buttons: undefined
+  Forms: undefined
+  Others: undefined
+  Roulette: undefined
 }
 
-export type BottomTabParamList = {
-  TabOne: undefined
-  TabTwo: undefined
-}
-
-export type TabOneParamList = {
-  TabOneScreen: undefined
-}
-
-export type TabTwoParamList = {
-  TabTwoScreen: undefined
+export type MainScreenProps = {
+  navigation: StackNavigationProp<MainStackParamList, 'Main'>
+  route: RouteProp<MainStackParamList, 'Main'>
 }

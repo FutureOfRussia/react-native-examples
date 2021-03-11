@@ -60,12 +60,12 @@ export default function UpdateBanner() {
             {load ? (
               <BounceButton style={styles.button} onPress={reload} disabled={loading} debounce>
                 <Text style={styles.buttonText}>{loading ? terms.load : terms.reload}</Text>
-                {loading && <ActivityIndicator style={{ marginLeft: px(10) }} size="small" color={Colors.LINK} />}
+                {loading && <ActivityIndicator style={{ marginLeft: px(10) }} size="small" color={Colors.ACTIVE} />}
               </BounceButton>
             ) : (
               <BounceButton style={styles.button} onPress={update} disabled={loading} debounce>
                 <Text style={styles.buttonText}>{loading ? terms.load : terms.update}</Text>
-                {loading && <ActivityIndicator style={{ marginLeft: px(10) }} size="small" color={Colors.LINK} />}
+                {loading && <ActivityIndicator style={{ marginLeft: px(10) }} size="small" color={Colors.ACTIVE} />}
               </BounceButton>
             )}
           </DefaultView>

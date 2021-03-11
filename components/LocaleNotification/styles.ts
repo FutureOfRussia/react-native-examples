@@ -34,6 +34,6 @@ export default StyleSheet.create({
   },
   btnText: {
     fontSize: px(16),
-    color: Colors.LINK,
+    color: Colors.ACTIVE,
   },
 })

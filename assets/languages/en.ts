@@ -1,10 +1,10 @@
 export default {
   titles: {
-    notFound: 'Oops!',
-    tabOne: 'Tab One',
-    tabTwo: 'Tab Two',
-    tabOneTitle: 'Tab One Title',
-    tabTwoTitle: 'Tab Two Title',
+    main: 'Components',
+    buttons: 'Buttons',
+    others: 'Others',
+    roulette: 'Roulette',
+    forms: 'Form elements',
   },
   updateBanner: {
     title: 'Application Update',
@@ -15,15 +15,39 @@ export default {
     reload: 'Reload',
     update: 'Install now',
   },
-  notFound: {
-    title: "This screen doesn't exist.",
-    navigate: 'Go to home screen!',
+  sections: {
+    components: 'Components',
+    examples: 'Examples of using',
   },
-  editScreenInfo: {
-    body: [
-      'Open up the code for this screen:',
-      'Change any of the text, save the file, and your app will automatically update.',
-    ],
-    tap: "Tap here if your app doesn't automatically update after making changes",
+  components: {
+    buttons: 'Buttons',
+    forms: 'Form elements',
+    others: 'Others',
+  },
+  others: {
+    carousel: 'Carousel',
+    image: 'Image with thumbnail preload',
+  },
+  buttons: {
+    bounce: 'Bounce button',
+    opacity: 'Opacity button',
+    highlight: 'Highlight button',
+    press: 'Press',
+  },
+  examples: {
+    roulette: 'Roulette',
+  },
+  roulette: {
+    cost: 'Cost of rotation',
+    prize: 'Your winnings:',
+    spin: 'Spin for',
+  },
+  forms: {
+    input: 'Simple Input with label',
+    secure: 'Secure Input',
+    placeholder: 'Please enter text',
+    label: 'Label',
+    check: 'Checkbox',
+    search: 'Search Bar',
   },
 }

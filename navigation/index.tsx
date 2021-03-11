@@ -1,21 +1,20 @@
+import { createStackNavigator, HeaderStyleInterpolators } from '@react-navigation/stack'
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native'
 import { ActivityIndicator, ColorSchemeName } from 'react-native'
-import { createStackNavigator } from '@react-navigation/stack'
 import * as Localization from 'expo-localization'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import * as React from 'react'
 
 import LinkingConfiguration from '../helpers/LinkingConfiguration'
-import { RootStackParamList } from '../types/Navigation'
-import BottomTabNavigator from './BottomTabNavigator'
-import { useTerms, useThemeColor } from '../hooks'
+import { Buttons, Others, Main, Roulette, Forms } from '../screens'
+import { MainStackParamList } from '../types/Navigation'
+import { Colors, Styles } from '../constants'
 import { Dispatch } from '../types/Models'
-import { NotFound } from '../screens'
-import { Styles } from '../constants'
 import { View } from '../components'
+import { useTerms } from '../hooks'
 
-const Stack = createStackNavigator<RootStackParamList>()
+const Stack = createStackNavigator<MainStackParamList>()
 
 export default function Navigation({
   colorScheme,
@@ -28,7 +27,6 @@ export default function Navigation({
     appState: { setAppState },
   } = useDispatch<Dispatch>()
   const [loading, setLoading] = useState(false)
-  const tintColor = useThemeColor({}, 'tint')
   const { titles } = useTerms()
 
   useEffect(() => {
@@ -44,13 +42,16 @@ export default function Navigation({
   return (
     <NavigationContainer linking={LinkingConfiguration} theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       {isLoadingComplete && !loading ? (
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Root" component={BottomTabNavigator} />
-          <Stack.Screen name="NotFound" component={NotFound} options={{ title: titles.notFound }} />
+        <Stack.Navigator screenOptions={{ headerStyleInterpolator: HeaderStyleInterpolators.forUIKit }}>
+          <Stack.Screen name="Main" component={Main} options={{ headerTitle: titles.main }} />
+          <Stack.Screen name="Buttons" component={Buttons} options={{ headerTitle: titles.buttons }} />
+          <Stack.Screen name="Forms" component={Forms} options={{ headerTitle: titles.forms }} />
+          <Stack.Screen name="Others" component={Others} options={{ headerTitle: titles.others }} />
+          <Stack.Screen name="Roulette" component={Roulette} options={{ headerTitle: titles.roulette }} />
         </Stack.Navigator>
       ) : (
         <View style={[Styles.fullFlex, Styles.centered]}>
-          <ActivityIndicator size="large" color={tintColor} />
+          <ActivityIndicator size="large" color={Colors.ACTIVE} />
         </View>
       )}
     </NavigationContainer>

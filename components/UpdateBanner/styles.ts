@@ -50,6 +50,6 @@ export default StyleSheet.create({
   buttonText: {
     fontSize: px(16),
     fontWeight: '500',
-    color: Colors.LINK,
+    color: Colors.ACTIVE,
   },
 })

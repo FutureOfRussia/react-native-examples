@@ -21,7 +21,7 @@ export default function App(): JSX.Element {
         <Navigation colorScheme={colorScheme} isLoadingComplete={isLoadingComplete} />
         <LocaleNotification />
         <UpdateBanner />
-        <StatusBar />
+        <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
       </Provider>
     </SafeAreaProvider>
   )

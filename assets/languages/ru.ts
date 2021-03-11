@@ -1,10 +1,10 @@
 export default {
   titles: {
-    notFound: 'Упс!',
-    tabOne: 'Первая вкладка',
-    tabTwo: 'Вторая вкладка',
-    tabOneTitle: 'Заголовок первой вкладки',
-    tabTwoTitle: 'Заголовок второй вкладки',
+    main: 'Компоненты',
+    buttons: 'Кнопки',
+    others: 'Остальное',
+    roulette: 'Рулетка',
+    forms: 'Элементы форм',
   },
   updateBanner: {
     title: 'Обновление приложения',
@@ -15,15 +15,39 @@ export default {
     reload: 'Перезагрузить',
     update: 'Установить сейчас',
   },
-  notFound: {
-    title: 'Этого экрана не существует.',
-    navigate: 'Перейти на главный экран!',
+  sections: {
+    components: 'Компоненты',
+    examples: 'Примеры использования',
   },
-  editScreenInfo: {
-    body: [
-      'Откройте код для этого экрана:',
-      'Измените любой текст, сохраните файл, и ваше приложение автоматически обновится.',
-    ],
-    tap: 'Нажмите здесь, если ваше приложение не обновляется автоматически после внесения изменений',
+  components: {
+    buttons: 'Кнопки',
+    forms: 'Элементы форм',
+    others: 'Остальное',
+  },
+  others: {
+    carousel: 'Карусель',
+    image: 'Image с предзагрузкой миниатюры',
+  },
+  buttons: {
+    bounce: 'Bounce button',
+    opacity: 'Opacity button',
+    highlight: 'Highlight button',
+    press: 'Press',
+  },
+  examples: {
+    roulette: 'Рулетка',
+  },
+  roulette: {
+    cost: 'Стоимость вращения',
+    prize: 'Ваш выигрыш:',
+    spin: 'Крутить за',
+  },
+  forms: {
+    input: 'Простой Input с лэйблом',
+    secure: 'Secure Input',
+    placeholder: 'Please enter text',
+    label: 'Label',
+    check: 'Checkbox',
+    search: 'Search Bar',
   },
 }
