@@ -37,5 +37,5 @@ export interface Section {
 export interface Item {
   icon: React.ComponentProps<typeof Ionicons>['name']
   label: string
-  path: 'Buttons' | 'Others' | 'Roulette' | 'Forms'
+  path: 'Buttons' | 'Others' | 'Roulette' | 'Forms' | 'DragAndDrop'
 }

@@ -2,8 +2,8 @@ import { Easing, runOnJS, useSharedValue, withTiming } from 'react-native-reanim
 import { View, Text as BaseText } from 'react-native'
 import React, { useState } from 'react'
 
+import { useTerms, useThemeColor } from '../../hooks'
 import { Roulette } from '../../components'
-import { useTerms } from '../../hooks'
 import styles from './styles'
 
 export default function RouletteScreen() {
@@ -32,6 +32,9 @@ export default function RouletteScreen() {
   const { roulette: terms } = useTerms()
 
   const progress = useSharedValue(initialOffset)
+
+  const backgroundColor = useThemeColor({}, 'sectionColor')
+  const textColor = useThemeColor({}, 'text')
 
   const getRandomIntInclusive = (min: number, max: number) =>
     Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
@@ -63,9 +66,9 @@ export default function RouletteScreen() {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor }]}>
       <View style={styles.prizeBlock}>
-        <BaseText style={styles.prizeText}>
+        <BaseText style={[styles.prizeText, { color: textColor }]}>
           {`${terms.prize} ${prizeIndex >= 0 ? segments[prizeIndex].text : ''}`}
         </BaseText>
       </View>

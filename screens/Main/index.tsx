@@ -23,7 +23,10 @@ export default function Main({ navigation }: MainScreenProps) {
       ],
     },
     {
-      items: [{ label: examples.roulette, icon: 'aperture-sharp', path: 'Roulette' }],
+      items: [
+        { label: examples.roulette, icon: 'aperture-sharp', path: 'Roulette' },
+        { label: examples.dragAndDrop, icon: 'move', path: 'DragAndDrop' },
+      ],
       label: sectionsTerms.examples,
     },
   ]

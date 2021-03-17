@@ -25,7 +25,7 @@ export default StyleSheet.create({
     ...Platform.select({ ios: { ...shadow() } }),
   },
   indicator: {
-    right: 0,
+    right: -px(10),
     zIndex: 100,
     position: 'absolute',
     borderWidth: px(20),

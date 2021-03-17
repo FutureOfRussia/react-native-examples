@@ -5,6 +5,7 @@ export default {
     others: 'Others',
     roulette: 'Roulette',
     forms: 'Form elements',
+    dragAndDrop: 'Drag & Drop',
   },
   updateBanner: {
     title: 'Application Update',
@@ -36,6 +37,7 @@ export default {
   },
   examples: {
     roulette: 'Roulette',
+    dragAndDrop: 'Drag & Drop',
   },
   roulette: {
     cost: 'Cost of rotation',

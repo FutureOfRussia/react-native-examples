@@ -5,6 +5,7 @@ export default {
     others: 'Остальное',
     roulette: 'Рулетка',
     forms: 'Элементы форм',
+    dragAndDrop: 'Drag & Drop',
   },
   updateBanner: {
     title: 'Обновление приложения',
@@ -36,6 +37,7 @@ export default {
   },
   examples: {
     roulette: 'Рулетка',
+    dragAndDrop: 'Drag & Drop',
   },
   roulette: {
     cost: 'Стоимость вращения',

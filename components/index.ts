@@ -3,6 +3,7 @@ export { default as Text } from './Text'
 export { default as Image } from './Image'
 
 export { default as Section } from './Section'
+export { default as DragAndDropItem } from './DragAndDropItem'
 
 export { default as BounceButton } from './BounceButton'
 export { default as OpacityButton } from './OpacityButton'

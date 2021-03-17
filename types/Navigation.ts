@@ -7,6 +7,7 @@ export type MainStackParamList = {
   Forms: undefined
   Others: undefined
   Roulette: undefined
+  DragAndDrop: undefined
 }
 
 export type MainScreenProps = {

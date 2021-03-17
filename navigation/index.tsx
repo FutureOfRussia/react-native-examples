@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import * as React from 'react'
 
+import { Buttons, Others, Main, Roulette, Forms, DragAndDrop } from '../screens'
 import LinkingConfiguration from '../helpers/LinkingConfiguration'
-import { Buttons, Others, Main, Roulette, Forms } from '../screens'
 import { MainStackParamList } from '../types/Navigation'
 import { Colors, Styles } from '../constants'
 import { Dispatch } from '../types/Models'
@@ -48,6 +48,7 @@ export default function Navigation({
           <Stack.Screen name="Forms" component={Forms} options={{ headerTitle: titles.forms }} />
           <Stack.Screen name="Others" component={Others} options={{ headerTitle: titles.others }} />
           <Stack.Screen name="Roulette" component={Roulette} options={{ headerTitle: titles.roulette }} />
+          <Stack.Screen name="DragAndDrop" component={DragAndDrop} options={{ headerTitle: titles.dragAndDrop }} />
         </Stack.Navigator>
       ) : (
         <View style={[Styles.fullFlex, Styles.centered]}>
